@@ -71,4 +71,11 @@ Plugin para VSCode: hover sobre .ext → explicación.
 Afiliados: links a software que abre cada extensión (ej: “Abrir con Adobe Acrobat”).
 
 Historial de búsquedas en la nube.
+<br><br>## 🚀 Cómo usar<br>bash
+git clone https://github.com/tuusuario/file-extension-searcher.git
+
+cd file-extension-searcher
+pip install -r requirements.txt
+uvicorn api_ext:app --reload
+<br><br>Visita en el navegador: `http://127.0.0.1:8000/extension/pdf`<br><br>## 🆓 Freemium vs Premium<br>- **Freemium**: búsqueda básica + descripción corta.<br>- **Premium (futuro SaaS)**: exportar JSON/CSV, historial, descripciones completas.<br><br>## 📜 Licencia<br>Este proyecto usa [Apache 2.0](./LICENSE).
 
