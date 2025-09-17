@@ -1,0 +1,16 @@
+<input id="query" placeholder="Buscar extensión..." />
+<button onclick="search()">Buscar</button>
+<div id="results"></div>
+
+<script>
+async function search() {
+  const ext = document.getElementById("query").value;
+  const res = await fetch(`http://127.0.0.1:8000/extension/${ext}`);
+  const data = await res.json();
+  document.getElementById("results").innerHTML = `
+    <h3>${data.title}</h3>
+    <p>${data.description}</p>
+    <p>Programas: ${data.programs.join(", ")}</p>
+  `;
+}
+</script>
